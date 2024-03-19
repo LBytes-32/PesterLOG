@@ -1,4 +1,6 @@
-import { appWindow } from '@tauri-apps/api/window'
-import Dom from './dom'
+import PageManager from './Tools/PageManager'
+import WelcomePage from './UI/Pages/Welcome/Welcome'
 
-Dom.Div('Hello world!')
+new PageManager({
+    'Welcome': new WelcomePage()
+}, 'Welcome')

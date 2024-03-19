@@ -19,6 +19,7 @@
       },
       "window": {
         "center": true,
+        "close": true,
         "setResizable": true,
         "setAlwaysOnTop": true,
         "setSize": true,

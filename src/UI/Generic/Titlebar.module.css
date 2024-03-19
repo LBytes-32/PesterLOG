@@ -1,0 +1,33 @@
+
+.Titlebar {
+    background-color: #ffffff;
+    height: 24pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TextArea {
+    font-size: 10pt;
+    padding-left: 5pt;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove margin */
+    display: flex; /* Make TextArea a flex container */
+    align-items: center; /* Center text vertically */
+    user-select: none;
+}
+
+.CloseButton {
+    height: 100%;
+    box-sizing: border-box;
+    width: 36pt;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.1s ease;
+    font-size: 14pt;
+}
+
+.CloseButton:hover {
+    background-color: rgb(255, 116, 116);
+}
