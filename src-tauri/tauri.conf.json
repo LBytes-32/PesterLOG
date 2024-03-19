@@ -1,0 +1,56 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "pester-log",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "center": true,
+        "setResizable": true,
+        "setAlwaysOnTop": true,
+        "setSize": true,
+        "setPosition": true,
+        "setFocus": true,
+        "startDragging": true,
+        "show": true,
+        "hide": true
+      }
+    },
+    "windows": [
+      {
+        "title": "PesterLOG",
+        "width": 800,
+        "height": 600,
+        "decorations": false
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    }
+  }
+}
