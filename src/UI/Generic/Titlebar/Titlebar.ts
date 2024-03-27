@@ -1,9 +1,9 @@
 import { appWindow } from "@tauri-apps/api/window"
-import UI from "../UI"
-import CSS from "./Titlebar.module.css"
-import Dom from "../../Tools/Dom"
+import ElementUI     from "@/UI/ElementUI"
+import Dom           from "@/Tools/Dom"
+import CSS           from "./Titlebar.module.css"
 
-class Titlebar extends UI {
+class Titlebar extends ElementUI {
     closeButton : HTMLButtonElement
     textArea    : HTMLSpanElement
     

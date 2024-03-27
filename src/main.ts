@@ -1,3 +1,3 @@
-import WindowManager from "./Tools/WindowManager"
+import WindowManager from "@/Tools/WindowManager"
 
 new WindowManager()

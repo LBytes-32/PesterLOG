@@ -1,4 +1,4 @@
-import Page from '../Page'
+import Page from '@/UI/Pages/Page'
 
 class WelcomePage extends Page {
     constructor() {

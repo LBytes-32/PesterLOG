@@ -1,7 +1,7 @@
-import PageManager  from "./PageManager"
-import EventManager from "./EventManager"
-import Titlebar     from "../UI/Generic/Titlebar"
-import WelcomePage  from "../UI/Pages/Welcome/Welcome"
+import PageManager  from "@/Tools/PageManager"
+import EventManager from "@/Tools/EventManager"
+import Titlebar     from "@/UI/Generic/Titlebar/Titlebar"
+import WelcomePage  from "@/UI/Pages/Welcome/Welcome"
 
 class WindowManager {
     pageman  : PageManager

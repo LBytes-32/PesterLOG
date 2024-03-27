@@ -1,6 +1,6 @@
-import UI from '../UI'
+import ElementUI from '@/UI/ElementUI'
 
-class Page extends UI {
+class Page extends ElementUI {
     constructor() {
         super()
     }

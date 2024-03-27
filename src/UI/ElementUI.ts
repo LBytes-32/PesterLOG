@@ -1,7 +1,7 @@
-import Dom from "../Tools/Dom"
-import EventManager from "../Tools/EventManager"
+import Dom from "@/Tools/Dom"
+import EventManager from "@/Tools/EventManager"
 
-class UI {
+class ElementUI {
     element: HTMLDivElement
     eventman: EventManager
     
@@ -27,4 +27,4 @@ class UI {
     }
 }
 
-export default UI
+export default ElementUI

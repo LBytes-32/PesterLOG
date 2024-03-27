@@ -1,4 +1,5 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vite"
+import tsconfigPaths from "vite-tsconfig-paths"
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
@@ -16,4 +17,5 @@ export default defineConfig(async () => ({
       ignored: ["**/src-tauri/**"],
     },
   },
+  plugins: [tsconfigPaths()]
 }));

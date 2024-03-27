@@ -1,4 +1,4 @@
-import Page from '../UI/Pages/Page'
+import Page from '@/UI/Pages/Page'
 
 type PageMap = { [key: string]: Page }
 
