@@ -1,12 +1,12 @@
 
 class EventManager {
-    private listeners: { [key: string]: { listener: EventListener, element: HTMLElement } }
+    private listeners: { [key: string]: { listener: EventListener, element: EventTarget } }
     
     constructor() {
         this.listeners = {}
     }
     
-    AddEventOn(element: HTMLElement, event: string, listener: EventListener) {
+    AddEvent(element: EventTarget, event: string, listener: EventListener) {
         this.listeners[event] = { listener: listener, element: element }
         element.addEventListener(event, listener)
     }

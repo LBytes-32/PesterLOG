@@ -3,21 +3,23 @@ import Page from '@/UI/Pages/Page'
 type PageMap = { [key: string]: Page }
 
 class PageManager {
-    pages       : PageMap
-    currentPage : Page
+    pages        : PageMap
+    currentPage? : Page
     
     constructor(pages: PageMap, current: string) {
         this.pages = pages
-        this.currentPage = this.GetPage(current)
+        this.Navigate(current)
     }
     
     GetPage(pageName: string) {
         return this.pages[pageName]
     }
     
-    Navigate(pageName: string) {
-        const page = this.pages[pageName]
-        this.currentPage.Hide()
+    Navigate(pageName: string): void {
+        if (this.currentPage)
+            this.currentPage.Hide()
+        
+        const page = this.GetPage(pageName)
         
         if (page) {
             page.Show()

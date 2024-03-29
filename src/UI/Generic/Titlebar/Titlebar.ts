@@ -17,11 +17,11 @@ class Titlebar extends ElementUI {
         this.closeButton = Dom.Create('button', '&times;', CSS.CloseButton)
         this.element.appendChild(this.closeButton)
         
-        this.eventman.AddEventOn(this.textArea, 'mousedown', () => {
+        this.eventman.AddEvent(this.textArea, 'mousedown', () => {
             appWindow.startDragging()
         })
         
-        this.eventman.AddEventOn(this.closeButton, 'click', () => {
+        this.eventman.AddEvent(this.closeButton, 'click', () => {
             appWindow.close()
         })
     }

@@ -19,10 +19,15 @@ class ElementUI {
     }
     
     Show() {
-        this.element.style.visibility = 'shown'
+        this.element.style.visibility = 'visible'
+        this.element.style.display = 'block'
     }
     
     Hide() {
+        this.element.style.display = 'none'
+    }
+    
+    Ghost() {
         this.element.style.visibility = 'hidden'
     }
 }
