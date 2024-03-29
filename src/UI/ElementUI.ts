@@ -2,8 +2,8 @@ import Dom from "@/Tools/Dom"
 import EventManager from "@/Tools/EventManager"
 
 class ElementUI {
-    element: HTMLDivElement
-    eventman: EventManager
+    element  : HTMLDivElement
+    eventman : EventManager
     
     constructor() {
         this.element = Dom.Create('div')
@@ -20,7 +20,7 @@ class ElementUI {
     
     Show() {
         this.element.style.visibility = 'visible'
-        this.element.style.display = 'block'
+        this.element.style.display = ''
     }
     
     Hide() {

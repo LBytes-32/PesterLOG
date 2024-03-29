@@ -1,8 +1,11 @@
 import PageManager  from "@/Tools/PageManager"
 import EventManager from "@/Tools/EventManager"
 import Titlebar     from "@/UI/Generic/Titlebar/Titlebar"
+
 import WelcomePage  from "@/UI/Pages/Welcome/Welcome"
 import SettingsPage from "@/UI/Pages/Settings/Settings"
+import WindowEvents from "@/Tools/WindowEvents"
+import PesterPage   from "@/UI/Pages/Pester/Pester"
 
 class WindowManager {
     pageman  : PageManager
@@ -19,19 +22,20 @@ class WindowManager {
         
         this.pageman = new PageManager(
             {
-                'welcome': new WelcomePage(),
-                'settings': new SettingsPage()
+                'welcome'  : new WelcomePage(),
+                'settings' : new SettingsPage(),
+                'pester'   : new PesterPage()
             },
             'welcome'
         )
         
-        this.eventman.AddEvent(document, 'set-page', (e) => this.SetPageEvent(e))
-    }
-    
-    private SetPageEvent(e: Event) {
-        let page = (e as CustomEvent).detail.page
-        console.log(page)
-        this.pageman.Navigate(page)
+        const EVENTS = [
+            { name: 'set-page',           handler: WindowEvents.SetPage },
+            { name: 'show-pester-prompt', handler: WindowEvents.ShowPesterPrompt }
+        ]
+        
+        for (let event of EVENTS)
+            this.eventman.AddEvent(document, event.name, (e) => event.handler(this, e))
     }
 }
 
