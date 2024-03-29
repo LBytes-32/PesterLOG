@@ -1,6 +1,5 @@
 import WindowManager from "@/Tools/WindowManager"
-import { appWindow } from "@tauri-apps/api/window"
-
+import { LogicalPosition, LogicalSize, appWindow } from "@tauri-apps/api/window"
 
 namespace WindowEvents {
     export function SetPage(winman: WindowManager, e: Event) {
@@ -9,10 +8,18 @@ namespace WindowEvents {
         winman.pageman.Navigate(page)
     }
     
-    export function ShowPesterPrompt(winman: WindowManager, e: Event) {
-        appWindow.center()
-        winman.pageman.Navigate('pester')
-        winman.titlebar.Hide()
+    export async function ShowPesterPrompt(winman: WindowManager, e: Event) {
+        winman.pageman.Navigate('pester');
+        winman.titlebar.Hide();
+        await appWindow.setSize(new LogicalSize(800, 40));
+        await appWindow.center();
+        let x = (await appWindow.innerPosition()).x;
+        await appWindow.setPosition(new LogicalPosition(x, 0));
+    }
+    
+    export function HidePesterPrompt(winman: WindowManager, e: Event) {
+        winman.pageman.Navigate('welcome')
+        winman.titlebar.Show()
     }
 }
 
