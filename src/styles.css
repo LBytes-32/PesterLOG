@@ -5,7 +5,7 @@
   font-weight: 400;
 
   color: #0f0f0f;
-  background-color: #f6f6f6;
+  background-color: #f36e6e;
   min-width: 0px;
 
   font-synthesis: none;
@@ -16,6 +16,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     margin: 0px;
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */

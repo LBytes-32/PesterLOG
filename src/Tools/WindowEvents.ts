@@ -2,6 +2,8 @@ import WindowManager from "@/Tools/WindowManager"
 import Api from "@/Tools/Api"
 import { LogicalPosition, LogicalSize, appWindow } from "@tauri-apps/api/window"
 
+
+
 namespace WindowEvents {
     export function SetPage(winman: WindowManager, e: Event) {
         winman.titlebar.Show()
@@ -9,7 +11,7 @@ namespace WindowEvents {
         winman.pageman.Navigate(page)
     }
     
-    export async function ShowPesterPrompt(winman: WindowManager, e: Event) {
+    export async function ShowPesterPrompt(winman: WindowManager) {
         
         let desktopInfo    = await Api.GetDesktopInfo()
         let windowPosition = await appWindow.innerPosition()
@@ -22,7 +24,7 @@ namespace WindowEvents {
             if (in_hor_bounds && in_ver_bounds) {
                 
                 const middle   = new LogicalPosition((monitor.width) / 2 + monitor.left, monitor.top)
-                const size     = new LogicalSize(900, 40)
+                const size     = new LogicalSize(1000, 50)
                 const position = new LogicalPosition(middle.x - size.width / 2, middle.y - size.height / 2)
                 
                 winman.titlebar.Hide()
@@ -38,7 +40,7 @@ namespace WindowEvents {
         }
     }
     
-    export async function HidePesterPrompt(winman: WindowManager, e: Event) {
+    export async function HidePesterPrompt() {
         await appWindow.setSize(new LogicalSize(450, 600));
         await appWindow.center();
     }

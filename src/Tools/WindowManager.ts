@@ -3,7 +3,6 @@ import EventManager from "@/Tools/EventManager"
 import Titlebar     from "@/UI/Generic/Titlebar/Titlebar"
 
 import WelcomePage  from "@/UI/Pages/Welcome/Welcome"
-import SettingsPage from "@/UI/Pages/Settings/Settings"
 import WindowEvents from "@/Tools/WindowEvents"
 import PesterPage   from "@/UI/Pages/Pester/Pester"
 
@@ -23,7 +22,6 @@ class WindowManager {
         this.pageman = new PageManager(
             {
                 'welcome'  : new WelcomePage(),
-                'settings' : new SettingsPage(),
                 'pester'   : new PesterPage()
             },
             'welcome'

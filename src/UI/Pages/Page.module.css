@@ -1,6 +1,8 @@
 
-.container {
-    background-color: #9fa1ff;
-    height: 28px;
+.Container {
+    background-color: #dddddd;
+    height: 100%;
+    min-height: none;
+    overflow: hidden;
 }
 

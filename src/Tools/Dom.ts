@@ -10,6 +10,14 @@ namespace Dom {
         
         return element
     }
+    
+    export function Button(text: string, style?: string): HTMLButtonElement {
+        return Create('button', text, style)
+    }
+    
+    export function Input(style?: string): HTMLInputElement {
+        return Create('input', '', style)
+    }
 }
 
 export default Dom

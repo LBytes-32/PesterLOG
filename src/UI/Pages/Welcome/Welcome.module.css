@@ -1,0 +1,9 @@
+
+.PesterButton {
+    background-color: #ebebeb;
+    font-size: 14pt;
+    margin: 12px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+}
