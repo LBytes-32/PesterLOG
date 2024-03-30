@@ -6,7 +6,12 @@ class PesterPage extends Page {
     constructor() {
         super()
         this.element.appendChild(Dom.Create('a', 'You\'ve been pestered! Back to home'))
-        this.eventman.AddEvent(this.element, 'click', () => WindowManager.Dispatch('set-page', { page: 'welcome' }))
+        this.eventman.AddEvent(this.element, 'click', () => this.HidePesterPrompt())
+    }
+    
+    HidePesterPrompt() {
+        WindowManager.Dispatch('hide-pester-prompt', {})
+        WindowManager.Dispatch('set-page', { page: 'welcome' })
     }
 }
 

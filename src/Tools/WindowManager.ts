@@ -30,8 +30,9 @@ class WindowManager {
         )
         
         const EVENTS = [
-            { name: 'set-page',           handler: WindowEvents.SetPage },
-            { name: 'show-pester-prompt', handler: WindowEvents.ShowPesterPrompt }
+            { name: 'set-page',            handler: WindowEvents.SetPage },
+            { name: 'show-pester-prompt',  handler: WindowEvents.ShowPesterPrompt },
+            { name: 'hide-pester-prompt',  handler: WindowEvents.HidePesterPrompt }
         ]
         
         for (let event of EVENTS)

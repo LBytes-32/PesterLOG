@@ -27,7 +27,12 @@
         "setFocus": true,
         "startDragging": true,
         "show": true,
-        "hide": true
+        "hide": true,
+        "create": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true
       }
     },
     "windows": [
